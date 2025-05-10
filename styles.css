@@ -1,5 +1,5 @@
 header {
-  background-color: #ff6600;
+  background-color: orange;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -38,8 +38,8 @@ nav a:focus {
 }
 
 button {
-  background-color: #003366; 
-  color: white;             
+  background-color: orange; 
+  color: blue;             
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
