@@ -50,6 +50,6 @@ button {
 
 button:hover,
 button:focus {
-  background-color: #002244; /* Darker blue on hover */
+  background-color: #002244; 
   outline: none;
 }
