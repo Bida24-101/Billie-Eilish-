@@ -39,4 +39,8 @@ document.getElementById('feedback-form').addEventListener('submit', function(e) 
     alert('Please enter a valid email address.');
   }
 });
-
+document.querySelectorAll('.buy-now-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Thank you for choosing this product! Purchase functionality coming soon.');
+  });
+});
