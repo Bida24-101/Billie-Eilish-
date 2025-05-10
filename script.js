@@ -26,3 +26,17 @@ function showNext() {
 
 // Change image and text every 4 seconds
 setInterval(showNext, 4000);
+document.getElementById('feedback-form').addEventListener('submit', function(e) {
+  const name = this.name.value.trim();
+  const email = this.email.value.trim();
+  const message = this.message.value.trim();
+
+  if (!name || !email || !message) {
+    e.preventDefault();
+    alert('Please fill in all fields before submitting.');
+  } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+    e.preventDefault();
+    alert('Please enter a valid email address.');
+  }
+});
+
