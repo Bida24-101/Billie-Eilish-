@@ -5,6 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Billie-Eilish</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page Background */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #003366;
+    }
+
+    /* Center the contact section vertically and horizontally */
+    .contact-section {
+      max-width: 600px;
+      width: 90%;
+      background-color: rgba(233, 240, 255, 0.9); /* semi-transparent light blue */
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Contact Form Container */
+    .contact-section h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ff6600; /* Bright orange */
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    /* Form Groups */
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Labels */
+    .form-group label {
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Inputs and Textarea */
+    .form-group input,
+    .form-group textarea {
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      border: 2px solid #007bff; /* Blue border */
+      border-radius: 8px;
+      font-family: inherit;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      color: #003366;
+    }
+
+    /* Placeholder color */
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #7a9edc;
+    }
+
+    /* Focus style for inputs and textarea */
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #ff6600; /* Orange on focus */
+      box-shadow: 0 0 8px 2px #ff6600;
+      background-color: #fff;
+    }
+
+    /* Textarea resize */
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Submit Button */
+    button[type="submit"] {
+      width: 100%;
+      background-color: #ff6600; /* Bright orange */
+      color: white;
+      padding: 1rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Button hover/focus */
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: #cc5200; /* Darker orange */
+      box-shadow: 0 0 12px #cc5200;
+      outline: none;
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -32,3 +135,4 @@
   </main>
 </body>
 </html>
+
