@@ -53,55 +53,53 @@ button:focus {
   background-color: #002244; 
   outline: none;
 }
-.image-gallery {
+.products {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  justify-content: space-between; /* Distributes space evenly between items */
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+  gap: 1rem; /* Space between the cards */
+  max-width: 1100px; /* Maximum width for the product section */
+  margin: 2rem auto; /* Center the section with margin */
+  padding: 0 1rem; /* Padding on the sides */
 }
 
-.Black hoodie.png {
-  flex: 1 1 30%; 
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 1rem;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+.product-card {
+  flex: 1 1 30%; /* Each card takes up about 30% of the row */
+  background: white; /* White background for the cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text inside the card */
+  padding: 1rem; /* Padding inside the card */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.image-card:hover,
-.image-card:focus-within {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  transform: translateY(-5px);
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
-.Black hoodie 2.png{
-  width: 100%;
-  height: 300px;  /* fixed height to unify image size */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
+.product-card img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-bottom: 0.8rem; /* Space between image and text */
 }
 
-.image-card h3 {
-  font-size: 1.2rem;
-  color: #003366; /* dark blue */
-  margin-bottom: 0.3rem;
+.product-card h3 {
+  font-size: 1.2rem; /* Font size for the product title */
+  color: #003366; /* Dark blue color for the title */
+  margin-bottom: 0.3rem; /* Space below the title */
 }
 
-.image-card p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.4;
+.product-card p {
+  color: #555; /* Gray color for the price */
+  font-size: 1rem; /* Font size for the price */
+  line-height: 1.4; /* Line height for better readability */
 }
 
 @media (max-width: 700px) {
-  .image-card {
-    flex: 1 1 100%;
+  .product-card {
+    flex: 1 1 100%; /* Stack cards vertically on smaller screens */
   }
 }
