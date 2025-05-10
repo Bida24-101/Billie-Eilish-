@@ -103,3 +103,22 @@ button:focus {
     flex: 1 1 100%; /* Stack cards vertically on smaller screens */
   }
 }
+.buy-now-btn {
+  margin-top: 0.8rem;
+  background-color: #003366; /* dark blue */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: #002244; /* darker blue on hover/focus */
+  outline: none;
+}
+
