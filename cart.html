@@ -9,7 +9,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
-      color: #ff6700; /* bright orange */
+      color: #ff6700;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -143,7 +143,7 @@
   </section>
 
   <script>
-    // Example cart content (You can replace this with dynamic data or localStorage)
+   
     let cart = {
       'Oversized Black Hoodie': { qty: 2, price: 65.00 },
       'Neon Green T-Shirt': { qty: 1, price: 35.00 }
@@ -180,10 +180,10 @@
         li.setAttribute('tabindex', '0');
 
         li.innerHTML = `
-          <span class="cart-item-name">${name}</span>
-          <span class="cart-item-qty">&times;${qty}</span>
-          <span class="cart-item-price">${formatPrice(lineTotal)}</span>
-          <button class="remove-btn" aria-label="Remove one ${name} from cart" data-name="${name}">&times;</button>
+          <span class="cart-item-name">BWP{name}</span>
+          <span class="cart-item-qty">&times;BWP{qty}</span>
+          <span class="cart-item-price">BWP{formatPrice(lineTotal)}</span>
+          <button class="remove-btn" aria-label="Remove one BWP{name} from cart" data-name="BWP{name}">&times;</button>
         `;
 
         cartItemsList.appendChild(li);
@@ -194,7 +194,7 @@
       checkoutBtn.setAttribute('aria-disabled', 'false');
     }
 
-    // Remove one quantity of item
+  
     function removeFromCart(name) {
       if (!cart[name]) return;
       cart[name].qty--;
