@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Example Buy Button to Cart</title>
+<script>
+function addToCartAndGo(productId, productName, price) {
+  // Get current cart from localStorage or initialize empty
+  let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+  if (cart[productId]) {
+    cart[productId].qty += 1;
+  } else {
+    cart[productId] = { name: productName, price: price, qty: 1 };
+  }
+
+  // Save updated cart
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Redirect to cart page
+  window.location.href = 'cart.html';
+}
+</script>
+</head>
+<body>
+  <h1>Product Page</h1>
+  <div>
+    <p>Product: Oversized Black Hoodie</p>
+    <p>Price: $65.00</p>
+    <button onclick="addToCartAndGo('p1', 'Oversized Black Hoodie', 65.00)">Buy</button>
+  </div>
+</body>
+</html>
+
