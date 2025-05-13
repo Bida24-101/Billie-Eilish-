@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Billie-Eilish Store - Product</title>
+<style>
+  body {
+    background-color: #0b1d51; 
+    color: #ff6a00; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 350px;
+    width: 100%;
+  }
+  .product-card {
+    background-color: #142f7b;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff6a0055;
+    text-align: center;
+  }
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  .product-name {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .product-price {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  button.buy-btn {
+    background-color: #ff6a00;
+    border: none;
+    color: #0b1d51;
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff6a00cc;
+    transition: background-color 0.3s ease;
+  }
+  button.buy-btn:hover {
+    background-color: #e55a00;
+  }
+  @media (max-width: 400px) {
+    body {
+      padding: 10px;
+    }
+    .product-card {
+      padding: 15px;
+    }
+  }
+</style>
+<script>
+  function addToCartAndRedirect(productId, productName, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+    if (cart[productId]) {
+      cart[productId].qty += 1;
+    } else {
+      cart[productId] = {
+        name: productName,
+        price: price,
+        qty: 1
+      };
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    
+    window.location.href = 'cart.html';
+  }
+</script>
+</head>
+<body>
+  <h1>Billie-Eilish Store</h1>
+  <div class="product-list" role="region" aria-label="Product list">
+    <div class="product-card" aria-label="Billie's black hoodie">
+      <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's black hoodie" loading="lazy" />
+      <div class="product-name">Billie's Black Hoodie</div>
+      <div class="product-price">BWP 290.99</div>
+      <button class="buy-btn" onclick="addToCartAndRedirect('p1', 'Billie\'s Black Hoodie', 290.99)" aria-label="Buy Billie's Black Hoodie for BWP 290.99">Buy</button>
+    </div>
+
+    <div class="product-card" aria-label="Billie's limited edition hoodie">
+      <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's limited edition hoodie" loading="lazy" />
+      <div class="product-name">Billie's Limited Edition Hoodie</div>
+      <div class="product-price">BWP 390.99</div>
+      <button class="buy-btn" onclick="addToCartAndRedirect('p2', 'Billie\'s Limited Edition Hoodie', 390.99)" aria-label="Buy Billie's Limited Edition Hoodie for BWP 390.99">Buy</button>
+    </div>
+
+    <div class="product-card" aria-label="Hit me hard and soft oversized tee">
+      <img src="https://i.imgur.com/AYp5usB.png" alt="Hit me hard and soft oversized tee" loading="lazy" />
+      <div class="product-name">Hit Me Hard and Soft Oversized Tee</div>
+      <div class="product-price">BWP 490.99</div>
+      <button class="buy-btn" onclick="addToCartAndRedirect('p3', 'Hit Me Hard and Soft Oversized Tee', 490.99)" aria-label="Buy Hit Me Hard and Soft Oversized Tee for BWP 490.99">Buy</button>
+    </div>
+  </div>
+</body>
+</html>
+
