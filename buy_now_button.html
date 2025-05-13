@@ -91,7 +91,7 @@
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    
+    // Redirect to cart page
     window.location.href = 'cart.html';
   }
 </script>
@@ -103,23 +103,14 @@
       <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's black hoodie" loading="lazy" />
       <div class="product-name">Billie's Black Hoodie</div>
       <div class="product-price">BWP 290.99</div>
-      <button class="buy-btn" onclick="addToCartAndRedirect('p1', 'Billie\'s Black Hoodie', 290.99)" aria-label="Buy Billie's Black Hoodie for BWP 290.99">Buy</button>
+      <button class="buy-btn" onclick="addToCartAndRedirect('p1', 'Billie\'s Black Hoodie', 290.99)" aria-label="Buy Billie's Black Hoodie for BWP 290.99">Buy Now</button>
     </div>
 
     <div class="product-card" aria-label="Billie's limited edition hoodie">
       <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's limited edition hoodie" loading="lazy" />
       <div class="product-name">Billie's Limited Edition Hoodie</div>
       <div class="product-price">BWP 390.99</div>
-      <button class="buy-btn" onclick="addToCartAndRedirect('p2', 'Billie\'s Limited Edition Hoodie', 390.99)" aria-label="Buy Billie's Limited Edition Hoodie for BWP 390.99">Buy</button>
+      <button class="buy-btn" onclick="addToCartAndRedirect('p2', 'Billie\'s Limited Edition Hoodie', 390.99)" aria-label="Buy Billie's Limited Edition Hoodie for BWP 390.99">Buy Now</button>
     </div>
 
-    <div class="product-card" aria-label="Hit me hard and soft oversized tee">
-      <img src="https://i.imgur.com/AYp5usB.png" alt="Hit me hard and soft oversized tee" loading="lazy" />
-      <div class="product-name">Hit Me Hard and Soft Oversized Tee</div>
-      <div class="product-price">BWP 490.99</div>
-      <button class="buy-btn" onclick="addToCartAndRedirect('p3', 'Hit Me Hard and Soft Oversized Tee', 490.99)" aria-label="Buy Hit Me Hard and Soft Oversized Tee for BWP 490.99">Buy</button>
-    </div>
-  </div>
-</body>
-</html>
-
+    <div class="product-card" aria-label="Hit me hard and soft
