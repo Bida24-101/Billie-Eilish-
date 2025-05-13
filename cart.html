@@ -26,7 +26,6 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: center;
-      /* subtle text shadow for depth */
       text-shadow: 0 0 3px #cc5200;
     }
     #cart-container {
@@ -46,7 +45,6 @@
       text-align: center;
       font-size: 1.4rem;
       color: #ff6700;
-      /* subtle text shadow */
       text-shadow: 0 0 4px #cc5200;
     }
     #cart-items {
@@ -138,7 +136,7 @@
     <ul id="cart-items" role="list">
       <li>No items in cart</li>
     </ul>
-    <div id="cart-total">Total: $0.00</div>
+    <div id="cart-total">Total: BWP0.00</div>
     <button id="checkout-btn" aria-disabled="true" disabled>Checkout</button>
   </section>
 
@@ -154,7 +152,7 @@
     const checkoutBtn = document.getElementById('checkout-btn');
 
     function formatPrice(price) {
-      return '$' + price.toFixed(2);
+      return 'BWP' + price.toFixed(2);
     }
 
     function renderCart() {
