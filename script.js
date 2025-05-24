@@ -44,3 +44,6 @@ document.querySelectorAll('.buy-now-btn').forEach(button => {
     alert('Thank you for choosing this product! Purchase functionality coming soon.');
   });
 });
+function showUnavailableAlert() {
+  alert("The product is not available");
+}
