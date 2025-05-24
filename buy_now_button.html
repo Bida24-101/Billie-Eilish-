@@ -76,23 +76,8 @@
   }
 </style>
 <script>
-  function addToCartAndRedirect(productId, productName, price) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || {};
-
-    if (cart[productId]) {
-      cart[productId].qty += 1;
-    } else {
-      cart[productId] = {
-        name: productName,
-        price: price,
-        qty: 1
-      };
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Redirect to cart page
-    window.location.href = 'cart.html';
+  function showUnavailableAlert() {
+    alert("The product is not available");
   }
 </script>
 </head>
@@ -100,17 +85,26 @@
   <h1>Billie-Eilish Store</h1>
   <div class="product-list" role="region" aria-label="Product list">
     <div class="product-card" aria-label="Billie's black hoodie">
-      <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's black hoodie" loading="lazy" />
+      <img src="Black hoodie.png" alt="Billie's black hoodie" loading="lazy" />
       <div class="product-name">Billie's Black Hoodie</div>
       <div class="product-price">BWP 290.99</div>
-      <button class="buy-btn" onclick="addToCartAndRedirect('p1', 'Billie\'s Black Hoodie', 290.99)" aria-label="Buy Billie's Black Hoodie for BWP 290.99">Buy Now</button>
+      <button class="buy-btn" onclick="showUnavailableAlert()" aria-label="Buy Billie's Black Hoodie for BWP 290.99">Buy Now</button>
     </div>
 
     <div class="product-card" aria-label="Billie's limited edition hoodie">
-      <img src="https://i.imgur.com/UhNjYj4.png" alt="Billie's limited edition hoodie" loading="lazy" />
+      <img src="Black hoodie 2.png" alt="Billie's limited edition hoodie" loading="lazy" />
       <div class="product-name">Billie's Limited Edition Hoodie</div>
       <div class="product-price">BWP 390.99</div>
-      <button class="buy-btn" onclick="addToCartAndRedirect('p2', 'Billie\'s Limited Edition Hoodie', 390.99)" aria-label="Buy Billie's Limited Edition Hoodie for BWP 390.99">Buy Now</button>
+      <button class="buy-btn" onclick="showUnavailableAlert()" aria-label="Buy Billie's Limited Edition Hoodie for BWP 390.99">Buy Now</button>
     </div>
 
-    <div class="product-card" aria-label="Hit me hard and soft
+    <div class="product-card" aria-label="Hit me hard and soft">
+     
+  <div class="product-card" aria-label="oversized tee">
+    <img src="oversized tee.webp.jpeg" alt="Hit me hard and soft oversized tee" loading="lazy" />
+    <div class="product-name">Hit me hard and soft oversized tee</div>
+    <div class="product=price">BWP 490.99</div>
+    <button class="but-btn" onclick="showUnavailableAlert()" aria-label="Buy Hit me hard and soft oversized tee for BWP 490.99">Buy Now</button>
+  </div>
+</body>
+</html>
